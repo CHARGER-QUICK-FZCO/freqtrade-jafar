@@ -1,0 +1,15 @@
+name: freqtrade-bot
+services:
+  - name: freqtrade
+    dockerfile_path: Dockerfile.deploy
+    source_dir: /
+    github:
+      branch: main
+      deploy_on_push: true
+    envs:
+      - key: EXCHANGE_KEY
+        scope: RUN_TIME
+        type: SECRET
+      - key: EXCHANGE_SECRET
+        scope: RUN_TIME
+        type: SECRET
