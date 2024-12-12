@@ -51,9 +51,20 @@
         }
     ],
     "telegram": {
-        "enabled": false,
-        "token": "",
-        "chat_id": ""
+        "enabled": true,
+        "token": "7639884988:AAGymv6JJ7XtJOsqWg3tCoYW7js1r-rZPKw",
+        "chat_id": "131817056",
+        "notification_settings": {
+            "status": "on",
+            "warning": "on",
+            "startup": "on",
+            "buy": "on",
+            "sell": "on",
+            "buy_cancel": "on",
+            "sell_cancel": "on",
+            "protection_trigger": "on",
+            "protection_trigger_global": "on"
+        }
     },
     "bot_name": "freqtrade",
     "initial_state": "running",
