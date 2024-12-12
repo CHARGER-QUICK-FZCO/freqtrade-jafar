@@ -4,6 +4,7 @@ services:
     dockerfile_path: Dockerfile.deploy
     source_dir: /
     github:
+      repo: CHARGER-QUICK-FZCO/freqtrade-jafar
       branch: main
       deploy_on_push: true
     envs:
