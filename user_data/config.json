@@ -32,8 +32,16 @@
         "ccxt_config": {},
         "ccxt_async_config": {},
         "pair_whitelist": [
+            "THE/USDT",
+            "XRP/USDT",
+            "HBAR/USDT",
+            "CRV/USDT",
+            "XLM/USDT",
+            "XVG/USDT",
             "BTC/USDT",
-            "ETH/USDT"
+            "ADA/USDT",
+            "AAVE/USDT",
+            "LINK/USDT"
         ],
         "pair_blacklist": []
     },
