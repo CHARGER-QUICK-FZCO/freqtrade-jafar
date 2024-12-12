@@ -1,7 +1,17 @@
 FROM freqtradeorg/freqtrade:stable
 
-COPY user_data /freqtrade/user_data
+# Debug: List contents before copy
+RUN ls -la /freqtrade/user_data || true
+
+# Copy with verbose output
+COPY user_data /freqtrade/user_data/
+
+# Debug: List contents after copy
+RUN ls -la /freqtrade/user_data/
 
 WORKDIR /freqtrade
+
+# Debug: Print working directory contents
+RUN pwd && ls -la
 
 CMD ["trade", "--config", "user_data/config.json", "--strategy", "SampleStrategy"]
