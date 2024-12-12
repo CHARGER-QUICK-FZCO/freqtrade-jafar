@@ -1,17 +1,19 @@
 FROM freqtradeorg/freqtrade:stable
 
-# Debug: List contents before copy
-RUN ls -la /freqtrade/user_data || true
+# Debug: Print current directory
+RUN pwd
 
-# Copy with verbose output
-COPY user_data /freqtrade/user_data/
+# Create directories
+RUN mkdir -p /freqtrade/user_data/strategies
 
-# Debug: List contents after copy
+# Copy files from absolute path
+COPY ./user_data/config.json /freqtrade/user_data/config.json
+COPY ./user_data/strategies/sample_strategy.py /freqtrade/user_data/strategies/
+
+# Debug: List files
 RUN ls -la /freqtrade/user_data/
+RUN ls -la /freqtrade/user_data/strategies/
 
 WORKDIR /freqtrade
 
-# Debug: Print working directory contents
-RUN pwd && ls -la
-
-CMD ["trade", "--config", "user_data/config.json", "--strategy", "SampleStrategy"]
+CMD ["trade", "--config", "/freqtrade/user_data/config.json", "--strategy", "SampleStrategy"]
