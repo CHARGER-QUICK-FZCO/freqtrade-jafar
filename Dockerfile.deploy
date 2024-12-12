@@ -1,11 +1,6 @@
 FROM freqtradeorg/freqtrade:stable
 
-# Create necessary directories
-RUN mkdir -p /freqtrade/user_data/strategies
-
-# Copy configuration and strategies
-COPY user_data/config.json /freqtrade/user_data/config.json
-COPY user_data/strategies/sample_strategy.py /freqtrade/user_data/strategies/
+COPY user_data /freqtrade/user_data
 
 WORKDIR /freqtrade
 

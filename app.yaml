@@ -7,6 +7,7 @@ services:
       repo: CHARGER-QUICK-FZCO/freqtrade-jafar
       branch: main
       deploy_on_push: true
+    instance_size_slug: basic-xxs
     envs:
       - key: EXCHANGE_KEY
         scope: RUN_TIME
