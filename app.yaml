@@ -13,3 +13,11 @@ services:
       - key: EXCHANGE_SECRET
         scope: RUN_TIME
         type: SECRET
+      - key: TELEGRAM_TOKEN
+        scope: RUN_TIME
+        value: "7639884988:AAGymv6JJ7XtJOsqWg3tCoYW7js1r-rZPKw"
+        type: SECRET
+      - key: TELEGRAM_CHAT_ID
+        scope: RUN_TIME
+        value: "131817056"
+        type: SECRET
