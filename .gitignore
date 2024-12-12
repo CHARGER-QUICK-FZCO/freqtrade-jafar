@@ -1,0 +1,13 @@
+*.sqlite
+user_data/data/
+user_data/backtest_results/
+*.pyc
+__pycache__/
+.env
+.venv
+logs/
+.pytest_cache/
+.coverage
+.idea
+.vscode
+*.log
